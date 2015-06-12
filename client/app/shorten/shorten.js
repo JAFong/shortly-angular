@@ -8,15 +8,4 @@ angular.module('shortly.shorten', [])
     Links.addLink(link);
   }
 
-  // $scope.addLink = function() {
-  //   $http.post('/api/links', {links: $location})
-  //   .success(function(data, status, headers, config) {
-  //     console.log(data);
-  //     console.log("Link added!")
-  //   })
-  //   .error(function(data, status, headers, config) {
-  //     console.log("Could not post!")
-  //   })
-  // };
-
 });

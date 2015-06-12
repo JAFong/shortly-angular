@@ -14,17 +14,5 @@ angular.module('shortly.links', [])
     });
   };
 
-  // $scope.getLinks = function() {
-  //   console.log('Running getLinks');
-  //   $http.get('/api/links')
-  //     .success(function(data, status, headers, config) {
-  //       $scope.data.links = data;
-  //       console.log("Got links!");
-  //     })
-  //     .error(function(data, status, headers, config) {
-  //       console.log("Error getting links!");
-  //     });
-  // };
-
   init();
 });
