@@ -1,8 +1,8 @@
 <div id='container'>
 <h1>Shorten</h1>
   <form name="shortenForm">
-    <input type='text' ng-model='link.url'>
-    <button ng-click='addLink(); clicked=!clicked'>Shorten</button>
+    <input type='url' ng-model='link.url' required novalidate>
+    <button ng-click='addLink(); click(link.url.$valid)'>Shorten</button>
   </form>
   <div>{{userMessage}}</div>
   <div ng-show="clicked">

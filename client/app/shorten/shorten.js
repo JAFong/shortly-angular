@@ -6,6 +6,11 @@ angular.module('shortly.shorten', [])
   $scope.renderLink;
   $scope.userMessage = "";
   $scope.clicked = false;
+  $scope.click = function(value) {
+    if (value) {
+      clicked = true;
+    }
+  }
   $scope.addLink = function() {
     Links.addLink($scope.link)
     .then(function(res) {

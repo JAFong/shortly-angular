@@ -1,12 +1,20 @@
 <div id='container'>
 <h1>Links</h1>
-<div ng-repeat='link in data.links'>
+<form>
+  <input type='text' ng-model='pageSearch'>
+
+
+</form>
+
+
+<div ng-repeat='link in data.links | orderBy: "-visits" | filter:pageSearch'>
 
 <!-- {{link}} -->
 
-  <div>{{link.title}}</div>
+  <div ng-click="link.visits = link.visits + 1">{{link.title}}</div>
   <div>{{link.url}}</div>
   <div><a href='{{link.url}}'>{{link.base_url}}/{{link.code}}</a></div>
+  <div>Visits: {{link.visits}}</div>
   <br>
 </div>
 </div>
