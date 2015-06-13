@@ -1,11 +1,17 @@
 <div id='container'>
 <h1>Shorten</h1>
   <form name="shortenForm">
-    <input type='text' ng-model='newLink'>
-    <button ng-click='addLink(); newLink=""'>Shorten</button>
+    <input type='text' ng-model='link.url'>
+    <button ng-click='addLink(); clicked=!clicked'>Shorten</button>
   </form>
   <div>{{userMessage}}</div>
-  <div>{{renderLink}}</div>
+  <div ng-show="clicked">
+    <br>
+    <div>{{renderLink[renderLink.length - 1].title}}</div>
+
+    <div>{{renderLink[renderLink.length - 1].url}}</div>
+    <div><a href="{{renderLink[renderLink.length - 1].url}}">{{renderLink[renderLink.length - 1].base_url}}/{{renderLink[renderLink.length - 1].code}}</a></div>
+  </div>
 </div>
 
 

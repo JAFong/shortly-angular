@@ -1,5 +1,12 @@
 <div id='container'>
 <h1>Links</h1>
-<div ng-repeat='link in data.links'>{{link}}</div>
-<div>Test Link</div>
+<div ng-repeat='link in data.links'>
+
+<!-- {{link}} -->
+
+  <div>{{link.title}}</div>
+  <div>{{link.url}}</div>
+  <div><a href='{{link.url}}'>{{link.base_url}}/{{link.code}}</a></div>
+  <br>
+</div>
 </div>

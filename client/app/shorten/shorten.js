@@ -3,13 +3,16 @@ angular.module('shortly.shorten', [])
 .controller('ShortenController', function ($scope, $location, Links, $http) {
 
   $scope.link = {};
-  $scope.newLink = "";
-  $scope.renderLink = "";
+  $scope.renderLink;
   $scope.userMessage = "";
+  $scope.clicked = false;
   $scope.addLink = function() {
-    Links.addLink($scope.newLink)
+    Links.addLink($scope.link)
     .then(function(res) {
-      $scope.renderLink = res;
+      Links.getLinks()
+        .then(function(linkResponse) {
+          $scope.renderLink = linkResponse.data;
+        });
       $scope.userMessage = 'Successfully shortened link!';
     })
     .catch(function(error) {
