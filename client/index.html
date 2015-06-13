@@ -7,9 +7,16 @@
   </head>
   <body>
     <h1>Shortly</h1>
-
+    <div class="navbar">
+      <div class="navbutton" ng-click="">
+        <a href="#/links">Links</a>
+      </div>
+      <div class="navbutton" ng-click="">
+        <a href="#/shorten">Shorten</a>
+      </div>
+    </div>
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
-    <div ng-view></div>
+    <div ng-view ></div>
 
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>

@@ -146,3 +146,21 @@ input[type=url]:focus {
   clear: both;
 }
 
+.navbar {
+  background-color: lightgrey;
+  height: 50px;
+}
+
+.navbutton {
+  position: relative;
+  top: 15px;
+  width: 65px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+}
+
+.navbutton:hover {
+  background-color: grey;
+  color: white;
+}
