@@ -1,8 +1,11 @@
 <div id='container'>
-  <form name="shortenForm" ng-submit='addLink(shorten)'>
-    <input type='text' ng-model='shorten'>
-    <button>Shorten</button>
+<h1>Shorten</h1>
+  <form name="shortenForm">
+    <input type='text' ng-model='newLink'>
+    <button ng-click='addLink(); newLink=""'>Shorten</button>
   </form>
+  <div>{{userMessage}}</div>
+  <div>{{renderLink}}</div>
 </div>
 
 

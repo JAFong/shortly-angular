@@ -148,6 +148,9 @@ input[type=url]:focus {
 
 .navbar {
   background-color: lightgrey;
+}
+
+.navbar a {
   height: 50px;
 }
 

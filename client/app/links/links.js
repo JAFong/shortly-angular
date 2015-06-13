@@ -2,7 +2,7 @@ angular.module('shortly.links', [])
 
 .controller('LinksController', function ($scope, Links, $http, $location) {
   $scope.data = {};
-  $scope.data.link = [];
+  $scope.data.links = [];
 
   var init = function() {
     $scope.getLinks();
@@ -10,7 +10,8 @@ angular.module('shortly.links', [])
   };
 
   $scope.getLinks = function() {
-    Links.getLinks().then(function(linkResponse) {
+    Links.getLinks()
+    .then(function(linkResponse) {
       $scope.data.links = linkResponse.data;
     });
   };
