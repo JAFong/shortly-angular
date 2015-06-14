@@ -17,4 +17,11 @@ angular.module('shortly.links', [])
   };
 
   init();
+})
+
+.directive('shortenedLink', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'app/links/shortenedLinks.html'
+  }
 });
